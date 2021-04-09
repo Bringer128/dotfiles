@@ -9,7 +9,7 @@ startProjector() {
 	local idePattern=${1}
 	sudo apt-get install -qq --no-install-recommends \
 		libfreetype6 \
-		libext6 \
+		libxext6 \
 		libxi6 \
 		libxrender1 \
 		libxtst6 \
