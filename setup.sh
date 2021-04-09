@@ -17,8 +17,8 @@ startProjector() {
 		python3-pip
 
 	pip3 install --quiet --user projector-installer
-	mkdir -p ~/.projector/configs
-	~/.local/bin/projector ~/.local/bin/projector ide install "${idePattern}" &
+	# mkdir -p ~/.projector/configs
+	# ~/.local/bin/projector ide autoinstall --config-name Rubymine --ide-name RubyMine &
 }
 
 
