@@ -18,7 +18,7 @@ startProjector() {
 
 	pip3 install --quiet --user projector-installer
 	mkdir -p ~/.projector/configs
-	projector ~/.local/bin/projector ide install "${idePattern}" &
+	~/.local/bin/projector ~/.local/bin/projector ide install "${idePattern}" &
 }
 
 
