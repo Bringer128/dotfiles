@@ -5,23 +5,6 @@ if [[ -z ${SPIN} ]]; then
 	exit 1
 fi
 
-startProjector() {
-	local idePattern=${1}
-	sudo apt-get install -qq --no-install-recommends \
-		libfreetype6 \
-		libxext6 \
-		libxi6 \
-		libxrender1 \
-		libxtst6 \
-		python3-dev \
-		python3-pip
-
-	pip3 install --quiet --user projector-installer
-	# mkdir -p ~/.projector/configs
-	# ~/.local/bin/projector ide autoinstall --config-name Rubymine --ide-name RubyMine &
-}
-
-
-startProjector 'RubyMine'
+./installRubyMineViaProjector.sh
 
 cp gitconfig ~/.gitconfig
