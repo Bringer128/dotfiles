@@ -5,7 +5,7 @@ if [[ -z ${SPIN} ]]; then
 	exit 1
 fi
 
-installRubyMineViaProjector() {
+installProjectorPrereqs() {
 	sudo apt-get install -qq --no-install-recommends \
 		libfreetype6 \
 		libxext6 \
@@ -17,12 +17,30 @@ installRubyMineViaProjector() {
 
 	pip3 install --quiet --user projector-installer
 
-	# Use this after 1.1.3 (or higher) is released. You can see with 
-	# ~/.local/bin/projector ide autoinstall --config-name RubyMine --ide-name "RubyMine 2020.3.2" --accept-licence=true
-
 	# Run this to install locally
 	# ~/.local/bin/projector ide autoinstall --config-name RubyMine --ide-name "RubyMine 2020.3.2"
 }
 
+installRubyMine() {
+	~/.local/bin/projector ide autoinstall --config-name RubyMine --ide-name "RubyMine 2020.3.2" --accept-licence=true
+	copyRubyMineConfig
+}
 
-installRubyMineViaProjector
+copyRubyMineConfig() {
+	if [ -d "rubymine_config" ]
+	then
+		echo "Could copy rubymine_config but idk where yet"
+		echo "License info could be copied too!"
+	else
+		echo "Not copying RubyMine config"
+	fi
+}
+
+runRubyMine() {
+	~/.local/bin/projector run RubyMine
+}
+
+installProjectorPrereqs
+
+# installRubyMine
+# runRubyMine
