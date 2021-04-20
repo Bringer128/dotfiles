@@ -22,7 +22,7 @@ installRubyMine() {
 	~/.local/bin/projector --accept-license ide autoinstall --config-name RubyMine --ide-name "RubyMine 2021.1"
 	copyRubyMineConfig
 	sudo npm install pm2 -g
-	pm2 start ~/.local/bin/projector run RubyMine
+	pm2 start '~/.local/bin/projector run RubyMine'
 }
 
 copyRubyMineConfig() {
