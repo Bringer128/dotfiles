@@ -5,6 +5,6 @@ if [[ -z ${SPIN} ]]; then
 	exit 1
 fi
 
-./installRubyMineViaProjector.sh
+# ./installRubyMineViaProjector.sh
 
 cp gitconfig ~/.gitconfig
