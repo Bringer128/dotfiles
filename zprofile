@@ -1,0 +1,2 @@
+
+alias wtfport="ss -ntlp"

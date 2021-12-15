@@ -8,3 +8,5 @@ fi
 # ./installRubyMineViaProjector.sh
 
 cp gitconfig ~/.gitconfig
+cp zprofile ~/.zprofile
+
